@@ -11,6 +11,8 @@ program.version("0.0.1");
 program
   .command("get-persons")
   .description("Make a network request to fetch most popular persons")
+  .requiredOption("-p, --popular", "Fetch the popular persons")
+  .requiredOption("--page", "The page of persons data results to fetch")
   .action(function handleAction() {
     console.log("hello-world");
   });
