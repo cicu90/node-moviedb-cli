@@ -3,7 +3,7 @@
 const { Command } = require("commander");
 
 require("dotenv").config();
-console.log(process.env.API_KEY);
+// console.log(process.env.API_KEY);
 
 const program = new Command();
 program.version("0.0.1");
@@ -12,9 +12,16 @@ program
   .command("get-persons")
   .description("Make a network request to fetch most popular persons")
   .requiredOption("-p, --popular", "Fetch the popular persons")
-  .requiredOption("--page", "The page of persons data results to fetch")
-  .action(function handleAction() {
-    console.log("hello-world");
+  .requiredOption(
+    "--page <number>",
+    "The page of persons data results to fetch"
+  )
+  .action(function handleAction(programOptions) {
+    let requestPath = 'person/';
+    if (programOptions.popular){
+      requestPath += 'popular'
+    }
+    console.log(programOptions.page);
   });
 
 program
