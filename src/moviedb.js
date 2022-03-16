@@ -2,6 +2,7 @@
 const API_KEY = process.env.API_KEY;
 // console.log(API_KEY)
 const { Command } = require("commander");
+const dotenv = require("dotenv");
 
 const program = new Command();
 program.version("0.0.1");
