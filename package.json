@@ -15,14 +15,19 @@
     "type": "git",
     "url": "https://github.com/assembler-school/node-moviedb-cli.git"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "node ./src/moviedb.js"
+  },
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.2",
     "commander": "^6.1.0",
     "dotenv": "^8.6.0",
     "express": "^4.17.3",
+    "http": "^0.0.1-security",
+    "inquire": "^0.4.8",
+    "inquirer": "^8.2.1",
     "node-notifier": "^8.0.0",
     "nodemon": "^2.0.15",
-    "ora": "^5.1.0"
+    "ora": "^5.4.1"
   }
 }
